@@ -10,7 +10,7 @@ const tajawal = LocalFont({
 
 export const metadata: Metadata = {
   title: "Kouttab",
-  description: "",
+  description: "منصة تعليمية متخصصة فى تعليم أحكام التجويد بأسلوب واضح ومتدرج.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

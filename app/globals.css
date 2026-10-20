@@ -1,26 +1,260 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary-light: var(--primary-light);
+  --color-primary-light-hover: var(--primary-light-hover);
+  --color-primary-light-active: var(--primary-light-active);
+
+  --color-primary-normal: var(--primary-normal);
+  --color-primary-normal-hover: var(--primary-normal-hover);
+  --color-primary-normal-active: var(--primary-normal-active);
+
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-dark-hover: var(--primary-dark-hover);
+  --color-primary-dark-active: var(--primary-dark-active);
+
+  --color-primary-darker: var(--primary-darker);
+
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-light-hover: var(--secondary-light-hover);
+  --color-secondary-light-active: var(--secondary-light-active);
+
+  --color-secondary-normal: var(--secondary-normal);
+  --color-secondary-normal-hover: var(--secondary-normal-hover);
+  --color-secondary-normal-active: var(--secondary-normal-active);
+
+  --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-dark-hover: var(--secondary-dark-hover);
+  --color-secondary-dark-active: var(--secondary-dark-active);
+
+  --color-secondary-darker: var(--secondary-darker);
+
+  --color-text-primary-light: var(--text-primary-light);
+  --color-text-primary-light-hover: var(--text-primary-light-hover);
+  --color-text-primary-light-active: var(--text-primary-light-active);
+
+  --color-text-primary-normal: var(--text-primary-normal);
+  --color-text-primary-normal-hover: var(--text-primary-normal-hover);
+  --color-text-primary-normal-active: var(--text-primary-normal-active);
+
+  --color-text-primary-dark: var(--text-primary-dark);
+  --color-text-primary-dark-hover: var(--text-primary-dark-hover);
+  --color-text-primary-dark-active: var(--text-primary-dark-active);
+
+  --color-text-primary-darker: var(--text-primary-darker);
+  --color-text-secondary-light: var(--text-secondary-light);
+  --color-text-secondary-light-hover: var(--text-secondary-light-hover);
+  --color-text-secondary-light-active: var(--text-secondary-light-active);
+
+  --color-text-secondary-normal: var(--text-secondary-normal);
+  --color-text-secondary-normal-hover: var(--text-secondary-normal-hover);
+  --color-text-secondary-normal-active: var(--text-secondary-normal-active);
+
+  --color-text-secondary-dark: var(--text-secondary-dark);
+  --color-text-secondary-dark-hover: var(--text-secondary-dark-hover);
+  --color-text-secondary-dark-active: var(--text-secondary-dark-active);
+
+  --color-text-secondary-darker: var(--text-secondary-darker);
+
+  --color-accent-light: var(--accent-light);
+  --color-accent-light-hover: var(--accent-light-hover);
+  --color-accent-light-active: var(--accent-light-active);
+
+  --color-accent-normal: var(--accent-normal);
+  --color-accent-normal-hover: var(--accent-normal-hover);
+  --color-accent-normal-active: var(--accent-normal-active);
+
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-dark-hover: var(--accent-dark-hover);
+  --color-accent-dark-active: var(--accent-dark-active);
+
+  --color-accent-darker: var(--accent-darker);
+  
+  --color-success-light: var(--success-light);
+  --color-success-light-hover: var(--success-light-hover);
+  --color-success-light-active: var(--success-light-active);
+
+  --color-success-normal: var(--success-normal);
+  --color-success-normal-hover: var(--success-normal-hover);
+  --color-success-normal-active: var(--success-normal-active);
+
+  --color-success-dark: var(--success-dark);
+  --color-success-dark-hover: var(--success-dark-hover);
+  --color-success-dark-active: var(--success-dark-active);
+
+  --color-success-darker: var(--success-darker);
+
+  --color-warning-light: var(--warning-light);
+  --color-warning-light-hover: var(--warning-light-hover);
+  --color-warning-light-active: var(--warning-light-active);
+
+  --color-warning-normal: var(--warning-normal);
+  --color-warning-normal-hover: var(--warning-normal-hover);
+  --color-warning-normal-active: var(--warning-normal-active);
+
+  --color-warning-dark: var(--warning-dark);
+  --color-warning-dark-hover: var(--warning-dark-hover);
+  --color-warning-dark-active: var(--warning-dark-active);
+
+  --color-warning-darker: var(--warning-darker);
+
+  --color-error-light: var(--error-light);
+  --color-error-light-hover: var(--error-light-hover);
+  --color-error-light-active: var(--error-light-active);
+
+  --color-error-normal: var(--error-normal);
+  --color-error-normal-hover: var(--error-normal-hover);
+  --color-error-normal-active: var(--error-normal-active);
+
+  --color-error-dark: var(--error-dark);
+  --color-error-dark-hover: var(--error-dark-hover);
+  --color-error-dark-active: var(--error-dark-active);
+
+  --color-error-darker: var(--error-darker);
+
+  --color-bg-normal: var(--bg-normal);
+  --color-card-normal: var(--card-normal);
+  --color-elevated-card-normal: var(--elevated-card-normal);
+  --color-stroke-normal: var(--stroke-normal);
+
+  --color-card-white: var(--card-white);
+  --color-bg-light: var(--bg-light);
+  --color-stroke-light: var(--stroke-light);
+ 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --primary-light: #e7eceb;
+  --primary-light-hover: #dbe2e1;
+  --primary-light-active: #b6c3c0;
+
+  --primary-normal: #123c35;
+  --primary-normal-hover: #103630;
+  --primary-normal-active: #0e302a;
+
+  --primary-dark: #0e2d28;
+  --primary-dark-hover: #0b2420;
+  --primary-dark-active: #081b18;
+
+  --primary-darker: #061513;
+
+
+  --secondary-light: #f9f6ef;
+  --secondary-light-hover: #f6f1e6;
+  --secondary-light-active: #ede2cc;
+
+  --secondary-normal: #c6a15b;
+  --secondary-normal-hover: #b29152;
+  --secondary-normal-active: #9e8149;
+
+  --secondary-dark: #957944;
+  --secondary-dark-hover: #776137;
+  --secondary-dark-active: #594829;
+
+  --secondary-darker: #453820;
+   --text-primary-light: #e9e9e9;
+  --text-primary-light-hover: #dedede;
+  --text-primary-light-active: #bcbcbc;
+
+  --text-primary-normal: #262626;
+  --text-primary-normal-hover: #222222;
+  --text-primary-normal-active: #1e1e1e;
+
+  --text-primary-dark: #1d1d1d;
+  --text-primary-dark-hover: #171717;
+  --text-primary-dark-active: #111111;
+
+  --text-primary-darker: #0d0d0d;
+  
+
+  --text-secondary-light: #f0f1f1;
+  --text-secondary-light-hover: #e8eae9;
+  --text-secondary-light-active: #d0d4d2;
+
+  --text-secondary-normal: #66736f;
+  --text-secondary-normal-hover: #5c6864;
+  --text-secondary-normal-active: #525c59;
+
+  --text-secondary-dark: #4d5653;
+  --text-secondary-dark-hover: #3d4543;
+  --text-secondary-dark-active: #2e3432;
+
+  --text-secondary-darker: #242827;
+
+  --accent-light: #fefeef;
+  --accent-light-hover: #fefeef;
+  --accent-light-active: #fcfcfc;
+
+  --accent-normal: #f6f6f6;
+  --accent-normal-hover: #dddddd;
+  --accent-normal-active: #c5c5c5;
+
+  --accent-dark: #b9b9b9;
+  --accent-dark-hover: #949494;
+  --accent-dark-active: #6f6f6f;
+
+  --accent-darker: #565656;
+
+  --success-light: #edfaed;
+  --success-light-hover: #e3f7e4;
+  --success-light-active: #c6efc8;
+
+  --success-normal: #47ca4c;
+  --success-normal-hover: #40b644;
+  --success-normal-active: #39a23d;
+
+  --success-dark: #359839;
+  --success-dark-hover: #2b792e;
+  --success-dark-active: #205b22;
+
+  --success-darker: #19471b;
+
+  --warning-light: #fff5e6;
+  --warning-light-hover: #fff0d9;
+  --warning-light-active: #ffdfb0;
+
+  --warning-normal: #ff9800;
+  --warning-normal-hover: #e68900;
+  --warning-normal-active: #cc7a00;
+
+  --warning-dark: #bf7200;
+  --warning-dark-hover: #995b00;
+  --warning-dark-active: #734400;
+
+  --warning-darker: #593500;
+
+  --error-light: #f7e6e9;
+  --error-light-hover: #f3d9de;
+  --error-light-active: #e7b0ba;
+
+  --error-normal: #b00020;
+  --error-normal-hover: #9e001d;
+  --error-normal-active: #8d001a;
+
+  --error-dark: #840018;
+  --error-dark-hover: #6a0013;
+  --error-dark-active: #4f000e;
+
+  --error-darker: #3e000b;
+
+  --bg-normal: #0b1c18;
+  --card-normal: #122823;
+  --elevated-card-normal: #18332d;
+  --stroke-normal: #243b35;
+
+  --card-white: #ffffff;
+  --bg-light: #f8f6f0;
+  --stroke-light: #ddd8ca;
+
+  --font-tajawal: 'tajawal'
+}
+
+body{
+  font-family: var(--font-tajawal);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

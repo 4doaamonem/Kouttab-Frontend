@@ -15,7 +15,7 @@ const TajweedSection = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-20">
         <div className="flex flex-col items-center justify-start lg:flex-row gap-7">
           {/* Right Section */}
-          <div>
+          <div className="flex flex-col justify-center items-center text-center lg:items-start lg:text-start">
             <div className="flex items-center justify-start gap-4">
               <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
               <span className=" text-secondary-normal font-medium text-lg  ">

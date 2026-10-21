@@ -1,3 +1,4 @@
+import AboutUsSection from "@/components/AboutUsSection";
 import GettingStartedSection from "@/components/GettingStartedSection";
 import Hero from "@/components/Hero";
 import LearningJourney from "@/components/LearningJourney";
@@ -12,6 +13,7 @@ export default function Home() {
       <TajweedSection />
       <LearningPathSection />
       <GettingStartedSection />
+      <AboutUsSection/>
     </div>
   );
 }

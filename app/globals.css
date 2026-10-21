@@ -258,3 +258,43 @@ body{
     
   }
 }
+.notch {
+  --w: 70px;     
+  --h: 60px;      
+  --r: 16px;       
+  --bg: var(--color-bg-light);   
+  --line: var(--stroke-light);
+
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: var(--w);
+  height: calc(var(--h) + var(--r));
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 100% 100%, transparent calc(var(--r) - 1px), var(--line) calc(var(--r) - 1px) var(--r), var(--bg) var(--r)) left bottom / var(--r) var(--r) no-repeat,
+    linear-gradient(var(--bg), var(--bg)) left top / 100% calc(100% - var(--r)) no-repeat;
+}
+
+.notch::before {
+  content: "";
+  position: absolute;
+  top: var(--r);
+  left: var(--r);
+  right: 0;
+  bottom: calc(var(--r) - 1px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-bottom-right-radius: var(--r);
+}
+
+.notch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  width: var(--r);
+  height: var(--r);
+  background: radial-gradient(circle at 100% 100%, transparent calc(var(--r) - 1px), var(--line) calc(var(--r) - 1px) var(--r), var(--bg) var(--r));
+}

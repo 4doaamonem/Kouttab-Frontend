@@ -16,6 +16,7 @@ const Hero = () => {
       </div>
       <div className="absolute left-0 top-1/2 -translate-y-1/2">
         <Image
+          priority
           src={"/assets/HeroLogo.png"}
           alt="Hero Logo"
           width={400}
@@ -54,7 +55,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-[#f8f6f0] via-[#f8f6f0]/50 to-transparent pointer-events-none " />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-bg-light via-bg-light/50 to-transparent pointer-events-none " />
     </div>
   );
 };

@@ -23,8 +23,8 @@ const LearningPathSection = () => {
           </p>
         </div>
         <div className="mt-11 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="group overflow-hidden  h-80.5 px-4 py-4 bg-[linear-gradient(176.01deg,rgba(237,226,204,0.75)_31.73%,rgba(198,161,91,0.45)_86.44%)] rounded-2xl border border-stroke-light text-center  flex    ">
-            <div className="flex flex-col items-start w-93.25">
+          <div className="group relative overflow-hidden  h-80.5 px-4 py-4 bg-[linear-gradient(176.01deg,rgba(237,226,204,0.75)_31.73%,rgba(198,161,91,0.45)_86.44%)] rounded-2xl border border-stroke-light text-center  flex    ">
+            <div className="flex flex-col items-start z-10 max-w-md">
               <div className="flex items-center justify-center gap-4">
                 <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
                 <span className=" text-secondary-normal font-medium text-lg  ">
@@ -64,7 +64,7 @@ const LearningPathSection = () => {
                 <ArrowLeft className="w-6 h-6" />
               </Link>
             </div>
-            <div className=" flex flex-col justify-end translate-y-12 ">
+            <div className="absolute left-0 pointer-events-none -bottom-10">
               <Image
                 src={"/assets/QuranImage.png"}
                 alt="Quran Image"
@@ -74,8 +74,8 @@ const LearningPathSection = () => {
               />
             </div>
           </div>
-          <div className="group overflow-hidden  px-4 py-4  h-80.5 bg-[linear-gradient(236.42deg,rgba(18,60,53,0.85)_19.72%,rgba(198,161,91,0.425)_104.72%)] rounded-2xl border border-stroke-light text-center  flex  ">
-            <div className="flex flex-col items-start w-93.25">
+          <div className="group relative overflow-hidden  px-4 py-4  h-80.5 bg-[linear-gradient(236.42deg,rgba(18,60,53,0.85)_19.72%,rgba(198,161,91,0.425)_104.72%)] rounded-2xl border border-stroke-light text-center  flex  ">
+            <div className="flex flex-col items-start max-w-md z-10">
               <div className="flex items-center justify-center gap-4">
                 <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
                 <span className=" text-secondary-normal font-medium text-lg  ">
@@ -115,7 +115,7 @@ const LearningPathSection = () => {
                 <ArrowLeft className="w-6 h-6" />
               </Link>
             </div>
-            <div className=" flex flex-col justify-end translate-y-12 ">
+            <div className="absolute left-0 pointer-events-none -bottom-10">
               <Image
                 src={"/assets/QuranImage.png"}
                 alt="Quran Image"

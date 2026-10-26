@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AppDownloadSection = () => {
   return (
-    <section className="bg-bg-light relative overflow-hidden py-16  ">
+    <section className="bg-bg-light relative overflow-hidden pt-16 pb-45  ">
       <div className="max-w-7xl mx-auto px-4   relative ">
         <div className="text-center">
           <div className="flex items-center justify-center gap-4 mb-1">
@@ -59,7 +59,7 @@ const AppDownloadSection = () => {
             </div>
           </div>
           <div className="">
-            <div className="w-64.75 h-130.75 absolute left-35.25 top-1/2 -translate-y-1/2 z-10 -bottom-15">
+            <div className="w-64.75 h-130.75 absolute left-35.25 -bottom-24  z-10 ">
               <Image
                 src={"/assets/RearPhone.png"}
                 alt="Kouttab Phone "
@@ -67,12 +67,32 @@ const AppDownloadSection = () => {
                 height={523}
               />
             </div>
-            <div className="w-64.75 h-130.75 absolute left-0  z-20  ">
+            <div className="w-64.75 h-130.75 absolute left-1 -bottom-38  z-20  ">
               <Image
-                src={"/assets/FrontPhone.png"}
+                src={"/assets/FrontPhone.svg"}
                 alt="Kouttab Phone "
                 width={259}
-                height={523}
+                height={550}
+                className="object-cover scale-110"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto mt-10 pb-15">
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-4 mb-1">
+              <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
+              <span className=" text-secondary-normal font-medium text-lg ">
+                تحميل التطبيق{" "}
+              </span>
+            </div>
+            <div>
+              <Image
+                src={"/assets/ArtWork.png"}
+                alt="Google Play"
+                width={196}
+                height={64}
+                className="object-cover"
               />
             </div>
           </div>

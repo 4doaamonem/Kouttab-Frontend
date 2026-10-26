@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import { Tajawal } from "next/font/google";
+import { Tajawal, Geist } from "next/font/google";
+import MainLayout from "@/components/MainLayout";
+import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
@@ -20,12 +25,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       dir="rtl"
       lang="ar"
-      className={`${tajawal.variable}  h-full antialiased`}
+      className={cn(
+        "h-full",
+        "antialiased",
+        tajawal.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
+        <MainLayout>
+          {" "}
+          {children} <Toaster />{" "}
+        </MainLayout>
       </body>
     </html>
   );

@@ -4,9 +4,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className=" relative bg-bg-normal overflow-hidden ">
-      <div className="absolute inset-0 z-0  opacity-5.5">
+      <div className="absolute inset-0 z-0  ">
         <Image
-          src={"/assets/pattern.jpeg"}
+          src={"/assets/newPattern.svg"}
           alt="Pattern"
           fill
           className="object-cover"

@@ -76,21 +76,21 @@ const TajweedSection = () => {
                 </div>
               </div>
             </div>
-            <div className=" absolute -rotate-30 shadow-md bottom-35 -right-35 bg-bg-light border border-stroke-light p-1.5 rounded-xl  ">
+            <div className=" absolute -rotate-30 shadow-md bottom-15 -right-16 md:bottom-35 md:-right-35 bg-bg-light border border-stroke-light p-1.5 rounded-xl  ">
               <GaugeCircle className="w-3 h-3 md:w-6 md:h-6 text-secondary-normal -rotate-90" />
               <h3 className="font-medium text-[8px] md:text-sm text-primary-normal ">
                 سرعة التلاوة
               </h3>
-              <p className="text-[6px] md:text-[12px] text-text-secondary-normal w-46.75">
+              <p className="text-[6px] md:text-[12px] text-text-secondary-normal w-[78.51px] md:w-46.75">
                 غيّر سرعة الاستماع لتتمكن من متابعة التلاوة بسهولة.
               </p>
             </div>
-            <div className="  absolute -rotate-25 shadow-md top-44 -left-35 bg-bg-light border border-stroke-light p-1.5 rounded-xl  ">
+            <div className="  absolute -rotate-25 shadow-md top-20 -left-16 md:top-44 md:-left-35 bg-bg-light border border-stroke-light p-1.5 rounded-xl  ">
               <Headphones className="w-3 h-3 md:w-6 md:h-6 text-secondary-normal " />
               <h3 className="font-medium text-[8px] md:text-sm text-primary-normal ">
                 استمع و تعلم{" "}
               </h3>
-              <p className="text-[6px] md:text-[12px] text-text-secondary-normal w-46.75">
+              <p className="text-[6px] md:text-[12px] text-text-secondary-normal w-[78.51px] md:w-46.75">
                 استمع إلى التلاوة وركّز على النطق الصحيح للأحكام.{" "}
               </p>
             </div>

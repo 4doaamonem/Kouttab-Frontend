@@ -1,6 +1,7 @@
 import { ArrowLeft, CircleHelp, Clock, Workflow } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Introduction from "./Introduction";
 
 const steps = [
   {
@@ -29,24 +30,13 @@ const GettingStartedSection = () => {
   return (
     <section className="bg-secondary-light-hover">
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-20">
-        {/* الهيدر */}
-        <div className="max-w-3xl mx-auto text-center mb-14">
-          <div className="flex items-center justify-center gap-4">
-            <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
-            <span className="text-secondary-normal font-medium text-lg">
-              خطتك التعليمية
-            </span>
-          </div>
-          <h3 className="text-[28px] font-medium text-text-primary-normal mb-3">
-            كيف تبدأ رحلتك في تعلّم التجويد؟
-          </h3>
-          <p className="text-lg font-medium text-text-secondary-normal max-w-2xl mx-auto">
-            ابدأ بتحديد نقطة البداية، واختر هدفك والوقت المتاح لك، ثم تعرّف على
-            الخطوات التي تساعدك على تنظيم رحلتك التعليمية.
-          </p>
-        </div>
+        <Introduction
+          label="خطتك التعليمية"
+          title="كيف تبدأ رحلتك في تعلّم التجويد؟"
+          description="ابدأ بتحديد نقطة البداية، واختر هدفك والوقت المتاح لك، ثم تعرّف على الخطوات التي تساعدك على تنظيم رحلتك التعليمية."
+        />
 
-        <div className="grid grid-cols-1 lg:grid-cols-[19rem_1fr] gap-y-7">
+        <div className="grid grid-cols-1 lg:grid-cols-[19rem_1fr] gap-y-7 mt-14">
           {steps.map((step, i) => (
             <div
               key={step.title}

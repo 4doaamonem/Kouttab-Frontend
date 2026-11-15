@@ -2,26 +2,17 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Introduction from "./Introduction";
 
 const LearningPathSection = () => {
   return (
     <section className="bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 py-16 ">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4">
-            <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
-            <span className=" text-secondary-normal font-medium text-lg  ">
-              مسارات التعلّم{" "}
-            </span>
-          </div>
-          <h3 className="font-medium text-[28px] text-text-primary-normal mb-3 ">
-            اختر مسار التعلّم المناسب لك
-          </h3>
-          <p className="font-medium text-lg text-text-secondary-normal ">
-            ابدأ من المسار الأقرب إلى هدفك، ثم تقدّم في التعلّم وفق محتوى المسار
-            ومستواك.
-          </p>
-        </div>
+        <Introduction
+          label="مسارات التعلّم"
+          title="اختر مسار التعلّم المناسب لك"
+          description="بدأ من الأساسيات أو انتقل إلى المستوى المتقدم، وفقًا لمعرفتك بأحكام التجويد."
+        />
         <div className="mt-11 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="group relative overflow-hidden  h-80.5 px-4 py-4 bg-[linear-gradient(176.01deg,rgba(237,226,204,0.75)_31.73%,rgba(198,161,91,0.45)_86.44%)] rounded-2xl border border-stroke-light text-center  flex    ">
             <div className="flex flex-col items-start z-10 max-w-md">

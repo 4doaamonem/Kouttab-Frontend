@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Challenges = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-11">
       {learningJourney.map((item, index) => (
         <div
           key={item?.title}

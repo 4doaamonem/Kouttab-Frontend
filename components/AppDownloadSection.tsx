@@ -1,24 +1,15 @@
 import Image from "next/image";
+import Introduction from "./Introduction";
 
 const AppDownloadSection = () => {
   return (
     <section className="bg-bg-light relative overflow-hidden pt-16 pb-45  ">
       <div className="max-w-7xl mx-auto px-4   relative ">
-        <div className="text-center">
-          <div className="flex items-center justify-center gap-4 mb-1">
-            <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
-            <span className=" text-secondary-normal font-medium text-lg ">
-              تطبيق كُتّاب{" "}
-            </span>
-          </div>
-          <h3 className="font-medium text-text-primary-normal text-[28px]">
-            تعلّم التجويد أينما كنت
-          </h3>
-          <p className="text-lg font-medium text-text-secondary-normal">
-            تابع تعلّم أحكام التجويد وتدرّب على تطبيقها من خلال تجربة كُتّاب على
-            هاتفك.
-          </p>
-        </div>
+        <Introduction
+          label="تطبيق كُتّاب"
+          title="تعلّم التجويد أينما كنت"
+          description="تابع تعلّم أحكام التجويد وتدرّب على تطبيقها من خلال تجربة كُتّاب على هاتفك."
+        />
       </div>
       <div className="relative  h-100 mt-16  ">
         <div className=" absolute inset-0   z-10">

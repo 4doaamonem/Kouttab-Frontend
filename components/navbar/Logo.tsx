@@ -4,7 +4,7 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className="relative block h-20 w-17.5">
+    <Link href={"/"} className="relative block h-14 sm:h-20 w-12.25 sm:w-17.5">
       <Image
         src={"/assets/logo.png"}
         alt="Kouttab Logo"

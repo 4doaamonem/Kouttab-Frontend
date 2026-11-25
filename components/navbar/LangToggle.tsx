@@ -36,7 +36,7 @@ const LangToggle = () => {
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex gap-1.5 lg:gap-1 lg:px-1 items-center hover:bg-secondary-light transition-colors cursor-pointer text-[16px] text-primary-normal border rounded-lg border-secondary-light-active p-2"
+        className="flex whitespace-nowrap gap-1.5 lg:gap-1 lg:px-1 items-center hover:bg-secondary-light transition-colors cursor-pointer text-[16px] text-primary-normal border rounded-lg border-secondary-light-active p-2"
       >
         <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
         {current.label} <Languages className="w-4 h-4" />

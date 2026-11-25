@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="sticky w-full z-50 top-0 bg-secondary-light-hover border-b border-stroke-light ">
       <div className="max-w-7xl mx-auto  py-4 px-4 md:px-12 lg:px-7  ">
-        <div className="flex items-center justify-between   ">
+        <div className="flex items-center justify-between gap-4">
           <Logo />
           <NavLinks />
           <ActionButtons />

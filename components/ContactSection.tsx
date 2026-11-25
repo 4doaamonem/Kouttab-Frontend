@@ -132,7 +132,7 @@ const ContactSection = () => {
           </div>
           <button
             type="button"
-            className="flex items-center justify-center gap-2 w-60 h-12 md:h-13 p-4 rounded-2xl bg-primary-normal font-medium text-sm md:text-lg text-bg-light self-start md:self-end hover:bg-primary-dark"
+            className="flex items-center justify-center gap-2 w-60 h-12 md:h-13 p-4 rounded-2xl bg-primary-normal font-medium text-sm md:text-lg text-bg-light self-start md:self-end hover:bg-primary-normal-hover"
           >
             إرسال الرسالة
             <ArrowLeft className="size-5 md:size-6 [stroke-width:1.5]" />

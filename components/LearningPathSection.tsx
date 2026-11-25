@@ -15,7 +15,8 @@ const LearningPathSection = () => {
           description="بدأ من الأساسيات أو انتقل إلى المستوى المتقدم، وفقًا لمعرفتك بأحكام التجويد."
         />
         <div className="mt-11 grid grid-cols-1 xl:grid-cols-2 gap-4 md:max-w-153 md:mx-auto xl:max-w-none">
-          <div className="group relative overflow-hidden h-50.5 md:h-80.5 bg-[linear-gradient(176.01deg,rgba(237,226,204,0.75)_31.73%,rgba(198,161,91,0.45)_86.44%)] rounded-[9.33px] md:rounded-2xl border-[0.58px] md:border border-stroke-light text-center  flex    ">
+          <div className="group relative overflow-hidden h-50.5 md:h-80.5 bg-[linear-gradient(176.01deg,rgba(237,226,204,0.75)_31.73%,rgba(198,161,91,0.45)_86.44%)] rounded-[9.33px] md:rounded-2xl border-[0.58px] md:border border-stroke-light text-center flex transition-shadow duration-300 hover:shadow-[0_8px_20px_rgba(89,72,41,0.14)]">
+            <span className="absolute inset-0 bg-black/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
             <div className="flex flex-col items-start z-10 w-54.5 md:w-93.25 px-3 py-2.5 md:px-5 md:pt-5.5 md:pb-5">
               <div className="flex items-center justify-center gap-2.5">
                 <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
@@ -55,7 +56,7 @@ const LearningPathSection = () => {
                 <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 xl:[stroke-width:1.5]" />
               </Link>
             </div>
-            <div className="hidden xl:block absolute left-2 -bottom-11.5 w-64.5 h-57.25 overflow-hidden pointer-events-none">
+            <div className="hidden xl:block absolute left-2 -bottom-11.5 w-64.5 h-57.25 overflow-hidden pointer-events-none origin-bottom transition-transform duration-300 group-hover:scale-115">
               <Image
                 src={"/assets/QuranImageDesktop.png"}
                 alt="Quran Image"
@@ -64,7 +65,7 @@ const LearningPathSection = () => {
                 className="absolute -left-2 top-0 max-w-none w-[274.6px] h-[237.2px]"
               />
             </div>
-            <div className="absolute left-0 md:left-2 pointer-events-none top-[97.4px] md:top-auto md:bottom-0 xl:hidden">
+            <div className="absolute left-0 md:left-2 pointer-events-none top-[97.4px] md:top-auto md:bottom-0 xl:hidden origin-bottom transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={"/assets/QuranImage.png"}
                 alt="Quran Image"
@@ -74,7 +75,8 @@ const LearningPathSection = () => {
               />
             </div>
           </div>
-          <div className="group relative overflow-hidden h-50.5 md:h-80.5 bg-[linear-gradient(236.42deg,rgba(18,60,53,0.85)_19.72%,rgba(198,161,91,0.425)_104.72%)] xl:bg-[linear-gradient(218.42deg,rgb(52_88_81)_19.7%,rgb(83_108_95)_30.3%,rgb(110_126_108)_41.0%,rgb(136_144_121)_51.6%,rgb(159_160_133)_62.2%,rgb(179_174_145)_72.8%,rgb(198_187_156)_83.5%,rgb(213_199_166)_94.1%,rgb(227_210_177)_104.7%)] rounded-[9.33px] md:rounded-2xl border-[0.58px] md:border border-stroke-light text-center  flex    ">
+          <div className="group relative overflow-hidden h-50.5 md:h-80.5 bg-[linear-gradient(236.42deg,rgba(18,60,53,0.85)_19.72%,rgba(198,161,91,0.425)_104.72%)] xl:bg-[linear-gradient(218.42deg,rgb(52_88_81)_19.7%,rgb(83_108_95)_30.3%,rgb(110_126_108)_41.0%,rgb(136_144_121)_51.6%,rgb(159_160_133)_62.2%,rgb(179_174_145)_72.8%,rgb(198_187_156)_83.5%,rgb(213_199_166)_94.1%,rgb(227_210_177)_104.7%)] rounded-[9.33px] md:rounded-2xl border-[0.58px] md:border border-stroke-light text-center flex transition-shadow duration-300 hover:shadow-[0_8px_20px_rgba(89,72,41,0.14)]">
+            <span className="absolute inset-0 bg-black/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
             <div className="flex flex-col items-start z-10 w-54.5 md:w-93.25 px-3 py-2.5 md:px-5 md:pt-5.5 md:pb-5">
               <div className="flex items-center justify-center gap-2.5">
                 <span className="w-[43.5px] h-px bg-linear-to-r from-transparent via-secondary-normal to-transparent translate-y-0.5"></span>
@@ -114,7 +116,7 @@ const LearningPathSection = () => {
                 <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 xl:[stroke-width:1.5]" />
               </Link>
             </div>
-            <div className="hidden xl:block absolute left-2 -bottom-11.5 w-64.5 h-57.25 overflow-hidden pointer-events-none">
+            <div className="hidden xl:block absolute left-2 -bottom-11.5 w-64.5 h-57.25 overflow-hidden pointer-events-none origin-bottom transition-transform duration-300 group-hover:scale-115">
               <Image
                 src={"/assets/QuranImageDesktop.png"}
                 alt="Quran Image"
@@ -123,7 +125,7 @@ const LearningPathSection = () => {
                 className="absolute -left-2 top-0 max-w-none w-[274.6px] h-[237.2px]"
               />
             </div>
-            <div className="absolute left-0 md:left-2 pointer-events-none top-[97.4px] md:top-auto md:bottom-0 xl:hidden">
+            <div className="absolute left-0 md:left-2 pointer-events-none top-[97.4px] md:top-auto md:bottom-0 xl:hidden origin-bottom transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={"/assets/QuranImage.png"}
                 alt="Quran Image"

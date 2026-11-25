@@ -8,7 +8,7 @@ const ActionButtons = () => {
       <LangToggle />
       <Link
         href={"/learn"}
-        className="hidden lg:block py-3 px-9.5 bg-primary-normal text-card-white font-medium text-lg rounded-2xl hover:bg-primary-dark"
+        className="hidden lg:block py-3 px-9.5 bg-primary-normal text-card-white font-medium text-lg rounded-2xl hover:bg-primary-normal-hover"
       >
         ابدأ التعلم
       </Link>

@@ -112,7 +112,7 @@ const GettingStartedSection = () => {
 
         <Link
           href="/assessment"
-          className="self-end mx-4 -mt-[13.5px] max-[343px]:mt-4 md:m-0 md:absolute md:top-193 md:left-11.75 lg:top-170 lg:max-[1139px]:top-[718px] lg:left-26 flex items-center justify-center gap-2 w-51 h-12 md:w-55 md:h-13 rounded-2xl bg-primary-normal text-sm md:text-base font-medium text-white hover:bg-primary-dark"
+          className="self-end mx-4 -mt-[13.5px] max-[343px]:mt-4 md:m-0 md:absolute md:top-193 md:left-11.75 lg:top-170 lg:max-[1139px]:top-[718px] lg:left-26 flex items-center justify-center gap-2 w-51 h-12 md:w-55 md:h-13 rounded-2xl bg-primary-normal text-sm md:text-base font-medium text-white hover:bg-primary-normal-hover"
         >
           ابدأ بتحديد مستواك
           <ArrowLeft className="size-6 stroke-[1.5]" />

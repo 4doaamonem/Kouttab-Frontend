@@ -259,8 +259,8 @@ body{
   }
 }
 .notch {
-  --w: 70px;     
-  --h: 60px;      
+  --w: 87px;
+  --h: 46px;
   --r: 16px;       
   --bg: var(--color-bg-light);   
   --line: var(--stroke-light);

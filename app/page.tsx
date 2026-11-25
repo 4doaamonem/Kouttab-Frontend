@@ -11,7 +11,7 @@ import TajweedSection from "@/components/TajweedSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-bg-light">
       <Hero />
       <LearningJourney />
       <TajweedSection />

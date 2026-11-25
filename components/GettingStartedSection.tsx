@@ -77,7 +77,7 @@ const GettingStartedSection = () => {
         {steps.map((step, i) => (
           <div
             key={step.title}
-            className={`flex items-start gap-3 px-4 py-2 md:absolute md:p-2 md:w-111.5 lg:right-(--r) lg:w-[min(682px,calc(100%-var(--r)))] ${step.position}`}
+            className={`flex items-start gap-3 px-4 py-2 rounded-xl transition-colors duration-300 hover:bg-bg-light md:absolute md:p-2 md:w-111.5 lg:right-(--r) lg:w-[min(682px,calc(100%-var(--r)))] ${step.position}`}
           >
             <div className="shrink-0 flex flex-col items-center gap-1 w-10 md:w-13">
               <div className="size-10 md:size-13 rounded-xl bg-primary-light-hover text-[#141B34] flex items-center justify-center [&_svg]:size-6 md:[&_svg]:size-8 [&_svg]:stroke-[1.5] md:[&_svg]:stroke-[1.125]">

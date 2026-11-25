@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 // Targets are the routes already used by the landing page cards (constants/index.tsx).
-const learnMenu = [
+export const learnMenu = [
   { label: "مسارات التجويد", href: "/learn" },
   { label: "خريطة التعلّم", href: "/plan" },
   { label: "مصحف التجويد", href: "/learn" },
@@ -67,7 +67,7 @@ const LearnDropdown = ({ anchor, href }: { anchor: React.ReactNode; href: string
 const NavLinks = () => {
   const pathname = usePathname();
   return (
-    <div className="hidden lg:flex items-center gap-6 xl:gap-10">
+    <div className="hidden xl:flex items-center gap-6 2xl:gap-10 whitespace-nowrap">
       {navLinks.map((link) => {
         const isActive = pathname === link?.href;
         const cls = `relative font-medium text-lg  ${link?.hasDropdown ? "flex items-center gap-4" : ""} ${isActive ? "text-secondary-normal  before:h-0.5 before:absolute  before:bg-primary-normal before:-bottom-2  before:left-0 before:right-0   " : "text-primary-normal hover:text-secondary-normal hover:scale-105 "}  transition-all duration-300`;

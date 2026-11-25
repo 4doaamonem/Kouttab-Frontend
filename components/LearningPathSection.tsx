@@ -49,7 +49,7 @@ const LearningPathSection = () => {
               </div>
               <Link
                 href={"/learn"}
-                className=" mt-3 md:mt-6.5 flex items-center gap-2 justify-center text-card-white hover:bg-primary-dark rounded-xl md:rounded-2xl px-4 md:px-8 py-2 md:py-3 bg-primary-normal font-medium text-sm md:text-base "
+                className=" mt-3 md:mt-6.5 flex items-center gap-2 justify-center text-card-white hover:bg-primary-normal-hover rounded-xl md:rounded-2xl px-4 md:px-8 py-2 md:py-3 bg-primary-normal font-medium text-sm md:text-base "
               >
                 استعراض المستوى
                 <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 xl:[stroke-width:1.5]" />
@@ -108,7 +108,7 @@ const LearningPathSection = () => {
               </div>
               <Link
                 href={"/learn"}
-                className=" mt-3 md:mt-6.5 flex items-center gap-2 justify-center text-card-white hover:bg-primary-dark rounded-xl md:rounded-2xl px-4 md:px-8 py-2 md:py-3 bg-primary-normal font-medium text-sm md:text-base "
+                className=" mt-3 md:mt-6.5 flex items-center gap-2 justify-center text-card-white hover:bg-primary-normal-hover rounded-xl md:rounded-2xl px-4 md:px-8 py-2 md:py-3 bg-primary-normal font-medium text-sm md:text-base "
               >
                 استعراض المستوى
                 <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 xl:[stroke-width:1.5]" />

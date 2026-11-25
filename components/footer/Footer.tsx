@@ -121,7 +121,7 @@ const Footer = () => {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
-                  className="text-text-primary-light-active size-6"
+                  className="text-text-primary-light-active size-6 cursor-pointer transition-colors duration-300 hover:text-secondary-normal"
                 >
                   {icon.paths.map(({ d, cap, join }) => (
                     <path

@@ -175,9 +175,9 @@ const BlogCard = ({ label, title, description, href, index }: Props) => {
         <div className="w-full flex justify-end mt-auto mb-2.5 md:mb-7">
           <Link
             href={href}
-            className="p-3.25 border border-stroke-light rounded-full transition-colors duration-300 group-hover:bg-bg-light/70"
+            className="group/arrow p-3.25 border border-stroke-light rounded-full transition-colors duration-300 group-hover:bg-secondary-light-hover group-hover:border-transparent"
           >
-            <svg viewBox="60.5 6475 24 24" fill="none" className="size-6 text-text-primary-normal">
+            <svg viewBox="60.5 6475 24 24" fill="none" className="size-6 text-text-primary-normal/40 transition-colors duration-300 group-hover:text-text-primary-normal">
               <path
                 d="M76.7497 6479.42C76.7497 6479.42 66.9204 6478.65 65.5362 6480.04C64.152 6481.42 64.921 6491.25 64.921 6491.25M66.1247 6480.63L80.2913 6494.79"
                 stroke="currentColor"

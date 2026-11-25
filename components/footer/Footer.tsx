@@ -1,133 +1,167 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const socialLinks: {
+  name: string;
+  paths: { d: string; cap?: boolean; join?: boolean }[];
+}[] = [
+  {
+    name: "X",
+    paths: [
+      { d: "M1.5 22.5L10.306 13.694M13.694 10.306L22.5 22.5H16.667L10.306 13.694L1.5 1.5H7.333L13.694 10.306ZM22.5 1.5L13.694 10.306", cap: true, join: true },
+    ],
+  },
+  {
+    name: "Facebook",
+    paths: [
+      { d: "M5.212 10.056C4.071 10.056 3.833 10.28 3.833 11.352V13.297C3.833 14.369 4.071 14.593 5.212 14.593H7.969V22.371C7.969 23.443 8.207 23.667 9.348 23.667H12.106C13.246 23.667 13.484 23.443 13.484 22.371V14.593H16.581C17.446 14.593 17.669 14.435 17.907 13.653L18.498 11.709C18.905 10.369 18.654 10.056 17.172 10.056H13.484V6.815C13.484 6.1 14.102 5.519 14.863 5.519H18.788C19.928 5.519 20.166 5.295 20.166 4.223V1.63C20.166 0.558 19.928 0.334 18.788 0.334H14.863C11.056 0.334 7.969 3.236 7.969 6.815V10.056H5.212Z", join: true },
+    ],
+  },
+  {
+    name: "LinkedIn",
+    paths: [
+      { d: "M3.25 9.084H2.666C1.566 9.084 1.016 9.084 0.675 9.426C0.333 9.767 0.333 10.317 0.333 11.417V21.334C0.333 22.434 0.333 22.984 0.675 23.326C1.016 23.667 1.566 23.667 2.666 23.667H3.25C4.35 23.667 4.9 23.667 5.241 23.326C5.583 22.984 5.583 22.434 5.583 21.334V11.417C5.583 10.317 5.583 9.767 5.241 9.426C4.9 9.084 4.35 9.084 3.25 9.084Z" },
+      { d: "M5.583 2.959C5.583 4.409 4.408 5.584 2.958 5.584C1.508 5.584 0.333 4.409 0.333 2.959C0.333 1.509 1.508 0.334 2.958 0.334C4.408 0.334 5.583 1.509 5.583 2.959Z" },
+      { d: "M12.38 9.084H11.416C10.316 9.084 9.766 9.084 9.425 9.426C9.083 9.767 9.083 10.317 9.083 11.417V21.334C9.083 22.434 9.083 22.984 9.425 23.326C9.766 23.667 10.316 23.667 11.416 23.667H12C13.1 23.667 13.65 23.667 13.991 23.326C14.333 22.984 14.333 22.434 14.333 21.334L14.333 17.251C14.333 15.318 14.949 13.751 16.769 13.751C17.679 13.751 18.416 14.534 18.416 15.501V20.751C18.416 21.851 18.416 22.401 18.758 22.742C19.1 23.084 19.65 23.084 20.75 23.084H21.331C22.431 23.084 22.981 23.084 23.323 22.743C23.664 22.401 23.665 21.851 23.665 20.751L23.666 14.334C23.666 11.435 20.909 9.084 18.179 9.084C16.625 9.084 15.239 9.846 14.333 11.037C14.333 10.302 14.333 9.934 14.173 9.661C14.072 9.489 13.928 9.345 13.756 9.244C13.483 9.084 13.115 9.084 12.38 9.084Z", join: true },
+    ],
+  },
+  {
+    name: "TikTok",
+    paths: [
+      { d: "M0.917 11.999C0.917 6.775 0.917 4.162 2.54 2.539C4.163 0.916 6.776 0.916 12 0.916C17.225 0.916 19.837 0.916 21.461 2.539C23.084 4.162 23.084 6.775 23.084 11.999C23.084 17.224 23.084 19.836 21.461 21.46C19.837 23.083 17.225 23.083 12 23.083C6.776 23.083 4.163 23.083 2.54 21.46C0.917 19.836 0.917 17.224 0.917 11.999Z", join: true },
+      { d: "M10.292 10.842C9.335 10.707 7.155 10.931 6.085 12.908C5.016 14.885 6.094 16.943 6.766 17.725C7.43 18.456 9.541 19.841 11.78 18.489C12.335 18.154 13.027 17.904 13.811 15.285L13.72 4.979C13.568 6.113 14.822 8.775 18.391 9.09", cap: true, join: true },
+    ],
+  },
+  {
+    name: "YouTube",
+    paths: [
+      { d: "M12 21.917C14.111 21.917 16.136 21.709 18.012 21.326C20.356 20.849 21.528 20.61 22.597 19.235C23.666 17.86 23.666 16.282 23.666 13.125V10.877C23.666 7.72 23.666 6.141 22.597 4.767C21.528 3.392 20.356 3.153 18.012 2.675C16.136 2.293 14.111 2.084 12 2.084C9.888 2.084 7.864 2.293 5.987 2.675C3.644 3.153 2.472 3.392 1.402 4.767C0.333 6.141 0.333 7.72 0.333 10.877V13.125C0.333 16.282 0.333 17.86 1.402 19.235C2.472 20.61 3.644 20.849 5.987 21.326C7.864 21.709 9.888 21.917 12 21.917Z" },
+      { d: "M16.622 12.364C16.449 13.071 15.528 13.579 13.686 14.594C11.682 15.698 10.68 16.25 9.868 16.038C9.593 15.966 9.34 15.839 9.128 15.667C8.5 15.16 8.5 14.106 8.5 11.999C8.5 9.892 8.5 8.839 9.128 8.332C9.34 8.16 9.593 8.033 9.868 7.961C10.68 7.748 11.682 8.3 13.686 9.405C15.528 10.42 16.449 10.928 16.622 11.634C16.681 11.875 16.681 12.124 16.622 12.364Z", join: true },
+    ],
+  },
+  {
+    name: "Instagram",
+    paths: [
+      { d: "M1.5 12C1.5 7.05 1.5 4.575 3.038 3.038C4.575 1.5 7.05 1.5 12 1.5C16.95 1.5 19.425 1.5 20.962 3.038C22.5 4.575 22.5 7.05 22.5 12C22.5 16.95 22.5 19.425 20.962 20.962C19.425 22.5 16.95 22.5 12 22.5C7.05 22.5 4.575 22.5 3.038 20.962C1.5 19.425 1.5 16.95 1.5 12Z", cap: true, join: true },
+      { d: "M16.666 12.001C16.666 14.578 14.577 16.667 12 16.667C9.422 16.667 7.333 14.578 7.333 12.001C7.333 9.423 9.422 7.334 12 7.334C14.577 7.334 16.666 9.423 16.666 12.001Z", cap: true, join: true },
+      { d: "M18.271 5.876H18.125M18.416 5.876C18.416 6.037 18.286 6.167 18.125 6.167C17.964 6.167 17.833 6.037 17.833 5.876C17.833 5.715 17.964 5.584 18.125 5.584C18.286 5.584 18.416 5.715 18.416 5.876Z", cap: true, join: true },
+    ],
+  },
+  {
+    name: "WhatsApp",
+    paths: [
+      { d: "M12 23.667C18.443 23.667 23.666 18.444 23.666 12.001C23.666 5.557 18.443 0.334 12 0.334C5.556 0.334 0.333 5.557 0.333 12.001C0.333 13.609 0.659 15.142 1.247 16.536C1.573 17.307 1.736 17.692 1.756 17.983C1.776 18.275 1.69 18.595 1.519 19.235L0.333 23.667L4.765 22.482C5.406 22.31 5.726 22.224 6.017 22.245C6.308 22.265 6.694 22.427 7.464 22.753C8.858 23.342 10.391 23.667 12 23.667Z", join: true },
+      { d: "M8.02 12.44L9.036 11.178C9.464 10.646 9.994 10.151 10.035 9.442C10.045 9.263 9.92 8.46 9.668 6.854C9.569 6.223 8.98 6.166 8.469 6.166C7.804 6.166 7.471 6.166 7.141 6.317C6.724 6.508 6.295 7.044 6.201 7.493C6.127 7.848 6.182 8.093 6.293 8.583C6.762 10.663 7.864 12.718 9.573 14.427C11.282 16.135 13.336 17.237 15.417 17.707C15.906 17.818 16.151 17.873 16.507 17.799C16.956 17.705 17.492 17.276 17.683 16.859C17.834 16.528 17.834 16.196 17.834 15.53C17.834 15.02 17.777 14.431 17.145 14.332C15.539 14.08 14.736 13.954 14.557 13.965C13.849 14.006 13.354 14.535 12.822 14.964L11.56 15.98" },
+    ],
+  },
+];
+
+const footerColumns = [
+  {
+    title: "روابط المنصة",
+    links: [
+      "الرئيسية",
+      "مسارات التعلّم",
+      "مصحف التجويد",
+      "التحديات",
+      "خريطة التعلّم",
+      "التقدّم والشهادة",
+      "المدونة",
+    ],
+  },
+  { title: "المساعدة", links: ["الأسئلة الشائعة", "تواصل معنا"] },
+  { title: "معلومات قانونية", links: ["سياسة الخصوصية", "شروط الاستخدام"] },
+  { title: "مصادر التعلّم", links: ["المراجع ومصادر المحتوى"] },
+];
+
 const Footer = () => {
   return (
-    <footer className=" relative bg-bg-normal overflow-hidden ">
-      <div className="absolute inset-0 z-0  ">
+    <footer className="relative bg-bg-normal overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-[url('/assets/footerMobile.svg')] bg-size-[auto_100%] bg-position-[center_top] bg-no-repeat md:bg-[url('/assets/footerTablet.svg')] xl:bg-[url('/assets/footerDesktop.svg')] xl:bg-size-[1440px_547px] xl:bg-position-[center_top]" />
         <Image
-          src={"/assets/newPattern.svg"}
-          alt="Pattern"
-          fill
-          className="object-cover"
+          src={"/assets/footerOrnament.png"}
+          alt=""
+          width={105}
+          height={112}
+          unoptimized
+          className="absolute top-0 left-0"
         />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-13.5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-start gap-20">
-          <div className="">
-            <Link href={"/"} className="">
+      <div className="relative z-10 max-w-310 mx-auto px-3.75 md:px-13 xl:px-0 pt-20.25 pb-18.75 md:pt-9.5 md:pb-6.75 xl:pt-13.5 xl:pb-10.5">
+        <div className="flex flex-col xl:flex-row gap-18 md:gap-21 xl:gap-20">
+          <div className="flex flex-col gap-9 md:gap-11 md:px-4 xl:px-0 xl:w-75 shrink-0">
+            <Link href={"/"}>
               <Image
                 src={"/assets/logoWhite.png"}
                 alt="Logo"
                 width={105}
                 height={120}
+                className="w-22 h-25 md:w-26.25 md:h-30"
               />
             </Link>
-            <h2 className="text-[32px] font-medium text-bg-light">
-              من الحرف إلى الإتقان
-            </h2>
-            <p className="text-lg font-medium text-text-secondary-normal max-w-73">
-              تعلّم التجويد خطوة بخطوة، وافهم أحكامه من خلال تجربة تعليمية
-              تفاعلية.
-            </p>
+            <div className="flex flex-col gap-3 w-73 md:w-75">
+              <h2 className="text-[26px] leading-[33px] md:text-[32px] md:leading-10 font-medium text-bg-light">
+                من الحرف إلى الإتقان
+              </h2>
+              <p className="text-base leading-6 md:text-lg md:leading-[1.5] font-medium text-text-secondary-light-active">
+                تعلّم التجويد خطوة بخطوة، وافهم أحكامه من خلال تجربة تعليمية
+                تفاعلية.
+              </p>
+            </div>
+            <div className="flex gap-5 mr-1.25 -mt-2 mb-1 md:mr-2 md:-mt-4 md:-mb-0.75 xl:mr-1.25 xl:-mt-4 xl:mb-0">
+              {[...socialLinks].reverse().map((icon) => (
+                <svg
+                  key={icon.name}
+                  role="img"
+                  aria-label={icon.name}
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  className="text-text-primary-light-active size-6"
+                >
+                  {icon.paths.map(({ d, cap, join }) => (
+                    <path
+                      key={d}
+                      d={d}
+                      strokeLinecap={cap ? "round" : undefined}
+                      strokeLinejoin={join ? "round" : undefined}
+                    />
+                  ))}
+                </svg>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm text-secondary-normal font-medium">
-              روابط المنصة
-            </p>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              الرئيسية
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              مسارات التعلّم
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              {" "}
-              مصحف التجويد
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              التحديات
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              خريطة التعلّم
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              التقدّم والشهادة
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              المدونة
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm text-secondary-normal font-medium">
-              المساعدة{" "}
-            </p>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              الأسئلة الشائعة{" "}
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              تواصل معنا{" "}
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm text-secondary-normal font-medium">
-              معلومات قانونية{" "}
-            </p>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              سياسة الخصوصية
-            </Link>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              شروط الاستخدام{" "}
-            </Link>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm text-secondary-normal font-medium">
-              مصادر التعلّم{" "}
-            </p>
-            <Link
-              href={"/"}
-              className="font-medium text-lg text-text-primary-light-active"
-            >
-              المراجع ومصادر المحتوى
-            </Link>
+          <div className="flex flex-col gap-6 md:flex-row md:flex-wrap xl:flex-nowrap xl:flex-1 xl:justify-between md:gap-x-56.5 md:gap-y-6 xl:gap-0 md:px-4 xl:pt-1.25">
+            {footerColumns.map((column, index) => (
+              <div
+                key={column.title}
+                className={`flex flex-col ${index < 2 ? "gap-3" : "gap-0.5"}`}
+              >
+                <p className="text-xs leading-[1.5] md:text-sm text-secondary-normal font-medium py-1 md:p-0">
+                  {column.title}
+                </p>
+                <div className="flex flex-col gap-2 md:gap-0">
+                  {column.links.map((link) => (
+                    <Link
+                      key={link}
+                      href={"/"}
+                      className={`font-medium text-base md:text-lg leading-[1.5] text-text-primary-light-active py-1 md:py-2 ${index === 3 ? "underline" : ""}`}
+                    >
+                      {link}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="border-t border-text-primary-light-active mt-15 flex items-center justify-center pt-6">
+        <div className="border-t border-text-primary-light-active -mx-3.75 md:mx-0 mt-15 md:mt-13.5 xl:mt-13.75 flex items-center justify-center p-2 pt-6">
           <p className="text-base font-medium text-primary-light-active">
-            © 2026 كُتّاب. جميع الحقوق محفوظة.
+            © 2026 كُتّاب. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>

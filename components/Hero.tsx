@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="flex items-center mt-9.25 md:mt-8.75 lg:mt-8.75 gap-4 max-[360px]:gap-2">
           <Link
             href={"/learn"}
-            className="flex items-center gap-2 justify-center text-card-white hover:bg-primary-dark rounded-2xl p-3 w-30 max-[360px]:w-auto whitespace-nowrap h-12 md:p-4 md:w-45 md:h-13 bg-primary-normal font-medium text-sm md:text-lg "
+            className="flex items-center gap-2 justify-center text-card-white hover:bg-primary-normal-hover rounded-2xl p-3 w-30 max-[360px]:w-auto whitespace-nowrap h-12 md:p-4 md:w-45 md:h-13 bg-primary-normal font-medium text-sm md:text-lg "
           >
             ابدأ التعلّم
             <ArrowLeft className="w-6 h-6 [stroke-width:1.5]" />

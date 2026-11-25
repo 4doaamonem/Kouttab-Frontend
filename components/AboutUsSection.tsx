@@ -52,7 +52,7 @@ const AboutUsSection = () => {
             <div className="hidden xl:block xl:mt-23.5">
             <Link
               href="/"
-              className="flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-primary-normal p-4 w-55 h-13 text-lg font-medium text-white hover:bg-primary-dark"
+              className="flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-primary-normal p-4 w-55 h-13 text-lg font-medium text-white hover:bg-primary-normal-hover"
             >
               اكتشف تجربة كُتّاب
               <ArrowLeft className="size-4" />
@@ -90,7 +90,7 @@ const AboutUsSection = () => {
           <div className="px-2 xl:hidden">
             <Link
               href="/"
-              className="flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-primary-normal p-4 w-51 h-13 text-lg font-medium text-white hover:bg-primary-dark"
+              className="flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-primary-normal p-4 w-51 h-13 text-lg font-medium text-white hover:bg-primary-normal-hover"
             >
               اكتشف تجربة كُتّاب
               <ArrowLeft className="size-6" />

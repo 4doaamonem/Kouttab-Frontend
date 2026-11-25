@@ -78,7 +78,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-bg-normal overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/assets/footerMobile.svg')] bg-size-[auto_100%] bg-position-[center_top] bg-no-repeat md:bg-[url('/assets/footerTablet.svg')] xl:bg-[url('/assets/footerDesktop.svg')] xl:bg-size-[1440px_547px] xl:bg-position-[center_top]" />
+        <div className="absolute inset-0 bg-[url('/assets/footerMobile.svg')] bg-cover bg-position-[center_top] bg-no-repeat md:bg-[url('/assets/footerTablet.svg')] xl:bg-[url('/assets/footerDesktop.svg')]" />
         <Image
           src={"/assets/footerOrnament.png"}
           alt=""

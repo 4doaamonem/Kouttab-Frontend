@@ -41,7 +41,7 @@ const TajweedSection = () => {
             </div>
             <Link
               href={"/learn"}
-              className="mt-9 md:mt-13 w-fit flex items-center gap-2 justify-center text-card-white hover:bg-primary-dark rounded-2xl p-4 h-12 md:h-13 bg-primary-normal font-medium text-sm md:text-lg "
+              className="mt-9 md:mt-13 w-fit flex items-center gap-2 justify-center text-card-white hover:bg-primary-normal-hover rounded-2xl p-4 h-12 md:h-13 bg-primary-normal font-medium text-sm md:text-lg "
             >
               استكشف المصحف <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
             </Link>
